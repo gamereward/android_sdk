@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">GameReward</string>
+    <string name="title_twostep">TWO FACTOR AUTHENTICATION</string>
+    <string name="title_game1">RANDOM 1-9</string>
+    <string name="title_game2">HIGH LOW GAME</string>
+    <string name="prompt_nickname">Nickname</string>
+    <string name="prompt_otp">OTP CODE</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_register">Register</string>
+    <string name="action_resetpassword">Send email reset password</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_transaction">Transaction</string>
+    <string name="action_otpsetting">Otp Setting</string>
+    <string name="action_transfer">Transfer money</string>
+    <string name="action_game1">Game 1</string>
+    <string name="action_game2">Game 2</string>
+    <string name="action_save">Save</string>
+    <string name="action_back">Back</string>
+    <string name="prompt_bet">Bet</string>
+    <string name="label_leaderboard">Leader Board</string>
+    <string name="label_history">History</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_otp">The otp is not correct!</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_incorrect_nickname">This nickname is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="transfer_success">You have transfer successfully!</string>
+    <string name="register_success">Register successfully!</string>
+    <string name="download_app">Download Google Authencator</string>
+    <string name="scan_or_copy">Scan OR Copy</string>
+    <string name="transfer_title">TRANSFER MONEY</string>
+    <string name="promt_to_address">To Address</string>
+    <string name="transfer_amount">Amount</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_game1">Game1Activity</string>
+</resources>
