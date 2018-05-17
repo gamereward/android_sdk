@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
+import io.gamereward.grd.GrdNet;
 import io.gamereward.sample.R;
 import io.gamereward.grd.GrdManager;
 
@@ -40,9 +41,9 @@ public class MainMenuActivity extends AppCompatActivity {
         // Set up the login form.
         mProgressView = findViewById(R.id.login_progress);
         //Initialize the application parameter
-        String appid = "[YOUR APP ID]";
-        String secret = "[YOUR APP SECRET]";
-        GrdManager.init(appid, secret);
+        String appid = "cc8b8744dbb1353393aac31d371af9a55a67df16";
+        String secret = "1679091c5a880faf6fb5e6087eb1b2dc4daa3db355ef2b0e64b472968cb70f0df4be00279ee2e0a53eafdaa94a151e2ccbe3eb2dad4e422a7cba7b261d923784";
+        GrdManager.init(appid, secret, GrdNet.TestNet);
         showLogin();
     }
     public void  hideSoftKeyboard() {

@@ -1,0 +1,7 @@
+siteUrl = gamereward.io
+gitUrl = https://github.com/gamereward/android_sdk
+version = 1.0.1
+groupId = io.gamereward
+licenses = ['MIT'] // or something else
+id = grd
+name = GameReward // actually not used
