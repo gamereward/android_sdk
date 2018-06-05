@@ -27,6 +27,7 @@ public class MainMenuActivity extends AppCompatActivity {
 
     private View mProgressView;
     LoginFragment loginFragment;
+    ResetPasswordFragment resetPasswordFragment;
     MenuFragment menuFragment;
     RegisterFragment registerFragment;
     OtpSettingFragment otpSettingFragment;
@@ -70,6 +71,21 @@ public class MainMenuActivity extends AppCompatActivity {
         transaction.commit();
     }
 
+    public void showResetPassword() {
+        FragmentManager manager = this.getFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        if (currentFragment != null) {
+            transaction.remove(currentFragment);
+            currentFragment = null;
+        }
+        if (resetPasswordFragment == null)
+            resetPasswordFragment = new ResetPasswordFragment();
+        resetPasswordFragment.setActivity(this);
+        currentFragment = resetPasswordFragment;
+        transaction.add(R.id.loginRoot, resetPasswordFragment);
+        transaction.commit();
+
+    }
     public void showLogin() {
         FragmentManager manager = this.getFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();

@@ -417,7 +417,34 @@ public class GrdManager {
             }
         });
     }
-
+    public static void resetPassword(String token,String newPassword, final IGrdStringCallBack callback) {
+        HashMap<String, String> pars = new HashMap<String, String>();
+        pars.put("token", token);
+        pars.put("password", md5(newPassword));
+        requestAsyncTask("doresetpassword", pars, false, new INetworkCallBack() {
+            @Override
+            public void OnRespose(String data) {
+                JSONObject jsonObject = getJsonObject(data);
+                int error = 100;
+                String message = "";
+                try {
+                    error = jsonObject.getInt("error");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                if (jsonObject.has("message")) {
+                    try {
+                        message = jsonObject.getString("message");
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (callback != null) {
+                    callback.OnFinished(error, message);
+                }
+            }
+        });
+    }
     public static void getAddressQRCode(String address, final IGrdImageCallBack callBack) {
         HashMap<String, String> params = new HashMap<>();
         params.put("text", "gamereward:" + address);

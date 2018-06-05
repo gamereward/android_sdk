@@ -26,12 +26,12 @@ public class LoginFragment extends Fragment {
     private View mLoginFormView;
     private View mOtpFormView;
     private TextView mMessageView;
-    private MainMenuActivity activity;
 
     public LoginFragment() {
         // Required empty public constructor
     }
 
+    private MainMenuActivity activity;
     public void setActivity(MainMenuActivity activity) {
         this.activity = activity;
     }
@@ -92,6 +92,7 @@ public class LoginFragment extends Fragment {
                     GrdManager.requestResetPassword(emailNickName, new IGrdStringCallBack() {
                         @Override
                         public void OnFinished(int error, String data) {
+                            activity.showProgress(false);
                             if(error==0){
                                 mMessageView.setText("An email has sent to your email. Please check email to reset password!");
                             }
