@@ -94,7 +94,7 @@ public class LoginFragment extends Fragment {
                         public void OnFinished(int error, String data) {
                             activity.showProgress(false);
                             if(error==0){
-                                mMessageView.setText("An email has sent to your email. Please check email to reset password!");
+                                activity.showResetPassword();
                             }
                             else{
                                 mMessageView.setText("Error:"+error+",message:"+data);
