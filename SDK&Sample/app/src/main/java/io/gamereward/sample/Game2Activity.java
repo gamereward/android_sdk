@@ -109,7 +109,6 @@ public class Game2Activity extends AppCompatActivity {
                             showCard(resultCardView,resultCard);
                             double money=jsonArray.getDouble(2);
                             GrdUser user=  GrdManager.getUser();
-                            user.balance=user.balance.add(new BigDecimal(money));
                             accountBalanceView.setText(user.balance.toString());
                             GrdSessionData sessionData=new GrdSessionData();
                             sessionData.sessionstart=(new Date()).getTime();

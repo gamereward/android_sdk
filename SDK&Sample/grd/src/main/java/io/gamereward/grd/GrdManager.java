@@ -809,6 +809,11 @@ public class GrdManager {
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
+                    try {
+                        _user.balance =getBigDecimal(obj.getString("balance"));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
                 }
                 if (callback != null) {
                     callback.OnFinished(error, message, rdata);

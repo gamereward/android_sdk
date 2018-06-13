@@ -132,7 +132,6 @@ public class Game1Activity extends AppCompatActivity {
                                     session.values.put("rand", yourNumber + "," + randNumber + "," + money);
                                     historyFragment.addHistory(session);
                                     GrdUser user = GrdManager.getUser();
-                                    user.balance = user.balance.add(new BigDecimal(money));
                                     accountBalanceView.setText("Balance:" + user.balance.toString());
                                     if(money>0){
                                         gameMessageView.setText("CONGRATULATIONS! YOU WIN:"+money);
